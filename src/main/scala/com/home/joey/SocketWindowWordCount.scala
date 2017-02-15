@@ -5,7 +5,9 @@ import org.apache.flink.streaming.api.scala._
 import org.apache.flink.streaming.api.windowing.time.Time
 
 /**
-  * Created by joey on 2/12/17.
+  * Reads text from a socket and once every 5 seconds print the number of occurrences of each distinct
+  * word during the previous 5 seconds, i.e. a tumbling window of processing time,
+  * as long as words are floating in.
   */
 class SocketWindowWordCount {
 
